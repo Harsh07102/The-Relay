@@ -6,7 +6,5 @@ __pycache__/
 .DS_Store
 .pytest_cache/
 .mypy_cache/
-results/*.csv
-data/processed/
 *.log
 .env.example

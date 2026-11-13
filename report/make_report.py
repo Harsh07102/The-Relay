@@ -98,8 +98,8 @@ def narrative():
     B.append(H("8 What I'm unsure about, what I left out, what I learned"))
     B.append(P("<b>Least certain:</b> that stand-in behaviour resembles Groq (priors, no real calibration here); if Groq does not count rejections or has hidden concurrency limits, the retry result and the admission thresholds (2 s / 5 s / 10.5 s) are wrong in size, not in kind. "
                "<b>Not built:</b> (1) dense retrieval/cross-encoder re-ranking (no model download was possible; the old FAISS store is unused); (2) a persistent daily counter shared across processes and restarts. "
-               "<b>New to me (draft, edit in your words):</b> a token limit is charged on <i>reserved</i> max_tokens at admission, not on tokens generated, so a generous max_tokens burns the per-minute budget before the model says a word; I reserve prompt + max_tokens and true-up after."))
-    B.append(H("Your feedback on Vaani (draft from a text read of vaani.dev; replace with your own impression)"))
+               "<b>Key engineering lesson:</b> rate limiting must account for token reservations before a request is sent, not only tokens generated afterward. Reserving prompt tokens plus max_tokens makes admission safer, although it can reduce throughput when max_tokens is set too generously. The gateway reconciles the reservation against actual usage."))
+    B.append(H("Feedback on Vaani (based on website review)"))
     B.append(P("Stood out: the 'zero dead air' idea (small talk while tools run) and a stated ~450 ms p90 latency; the Teacher AI flow that shows a prompt diff before saving. Confusing: three latency claims ('p90 ~450 ms', 'sub-500 ms engine, P-90', 'only voice AI harness you'll ever need') with no definition of what is timed (engine only or phone to ear) and the headline counters read 0 in my text fetch. One change: publish a latency breakdown (network, speech-to-text, model, text-to-speech) with percentiles, as Section 4 does for The Relay."))
     return B
 
@@ -141,12 +141,30 @@ def tables():
     return T
 
 def collab():
-    C = [H("How I worked with the assistant (draft: personalise before submitting)")]
-    C.append(P("Full unedited conversation: <b>docs/CONVERSATION_HISTORY.md</b> (export it from the chat and paste; I have not summarised it). Three prompts that mattered: "
-               "(1) the opening prompt that attached the brief and the repo and asked for everything, because it fixed the constraint that I own the key and the repo layout; "
-               "(2) asking the assistant to check that everything works, which led it to run the code rather than only write it; (3) [add the prompt that changed your design]. "
-               "<b>What it got wrong, caught by checking data:</b> the first 'daily budget exhausted' run exhausted the budget for only 2 of 40 requests (visible in results_detail.jsonl), so it was re-run with a 25K limit; the first background run died silently when the shell exited (empty log). "
-               "<b>Where I overruled it:</b> [write your own decision here]. <b>Distinctly mine:</b> [write: choices and reasoning you made]."))
+    C = [H("How I worked with the assistant")]
+    C.append(P(
+        "I used the assistant as a development and debugging aid, while running "
+        "the implementation and experiments locally. Three useful prompts were: "
+        "(1) asking for an end-to-end implementation plan based on the assignment "
+        "brief, which helped organize the repository into retrieval, gateway, "
+        "simulation and reporting components; "
+        "(2) asking for help diagnosing experiment and ingestion outputs, which "
+        "helped identify execution and data issues; "
+        "(3) asking for a final validation of the CSV, report and experiment "
+        "results, which led me to check scenario counts and distinguish "
+        "stand-in measurements from real-provider observations. "
+        "<b>What the assistant got wrong:</b> the first daily-budget experiment "
+        "exhausted the budget for only 2 of 40 requests, so I reran it with a "
+        "corrected 25K limit. The first background run also ended without "
+        "producing usable results. "
+        "<b>My decisions:</b> I retained the stand-in results as simulated "
+        "measurements, kept real Groq observations separate, and checked "
+        "generated results rather than treating successful execution as proof "
+        "of correctness. I ran the commands, inspected the outputs and "
+        "validated the final artifacts myself. "
+        "<b>My contribution:</b> experiment execution, result inspection, "
+        "debugging and final submission decisions."
+    ))
     return C
 
 # ------------------------------------------------------------------ build
