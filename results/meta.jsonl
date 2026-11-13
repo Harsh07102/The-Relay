@@ -1,0 +1,10 @@
+{"scenario": "eval_R1", "n": 20, "duration_s": 58.3, "offered_per_min": 21.1, "peak_queue": 1, "n429": 0, "calls": 39, "setting": "R1"}
+{"scenario": "eval_R2", "n": 20, "duration_s": 57.5, "offered_per_min": 21.1, "peak_queue": 1, "n429": 0, "calls": 38, "setting": "R2"}
+{"scenario": "eval_R3", "n": 20, "duration_s": 57.6, "offered_per_min": 21.1, "peak_queue": 1, "n429": 0, "calls": 39, "setting": "R3"}
+{"scenario": "eval_R4", "n": 20, "duration_s": 57.6, "offered_per_min": 21.1, "peak_queue": 1, "n429": 0, "calls": 40, "setting": "R4"}
+{"scenario": "steady", "n": 20, "duration_s": 58.3, "offered_per_min": 21.1, "peak_queue": 1, "n429": 0, "calls": 39, "setting": "R1"}
+{"scenario": "burst", "n": 40, "duration_s": 10.5, "offered_per_min": "burst", "peak_queue": 40, "n429": 0, "calls": 57, "setting": "R1"}
+{"scenario": "sustained_overload", "n": 80, "duration_s": 59.3, "offered_per_min": 80.9, "peak_queue": 1, "n429": 1, "calls": 87, "setting": "R1"}
+{"scenario": "rpm_halved", "n": 24, "duration_s": 68.0, "offered_per_min": 25.0, "peak_queue": 1, "n429": 1, "calls": 45, "setting": "R1"}
+{"scenario": "overload_naive_retry", "n": 80, "duration_s": 63.4, "offered_per_min": 80.9, "peak_queue": 0, "n429": 190, "calls": 292, "setting": "R1"}
+{"scenario": "daily_exhausted", "n": 40, "duration_s": 58.7, "offered_per_min": 40.9, "peak_queue": 1, "n429": 1, "calls": 31, "setting": "R1"}

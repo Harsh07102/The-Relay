@@ -1,0 +1,10 @@
+{
+ "ttft_median_ms": 488.0,
+ "ttft_sigma": 0.499,
+ "tps": 1100.0,
+ "p_slow": 0.033,
+ "p_error": 0.0,
+ "tpm": 8000,
+ "rpd": 1000,
+ "rpm": 30
+}

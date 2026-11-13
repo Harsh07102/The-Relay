@@ -1,0 +1,292 @@
+{
+ "model": "openai/gpt-oss-20b",
+ "started": "2026-11-13T05:44:07.651597+00:00",
+ "headers_ok": {
+  "x-ratelimit-limit-requests": "1000",
+  "x-ratelimit-limit-tokens": "8000",
+  "x-ratelimit-remaining-requests": "995",
+  "x-ratelimit-remaining-tokens": "7882",
+  "x-ratelimit-reset-requests": "7m12s",
+  "x-ratelimit-reset-tokens": "885ms"
+ },
+ "limits": {
+  "burst_first_429": {
+   "after_requests": 30,
+   "after_s": 13.9,
+   "headers": {
+    "retry-after": "2",
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "922",
+    "x-ratelimit-reset-requests": "1h52m19.2s"
+   },
+   "body": "{\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m72z0pn7e99sgv91196kjcr5` service tier `on_demand` on requests per minute (RPM): Limit 30, Used 30, Requested 1. Please try again in 2s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\",\"type\":\"requests\",\"code\":\"rate_limit_exceeded\"}}\n"
+  },
+  "retry_after_s": 2.0,
+  "recovered_after_s": 2.4,
+  "token_first_429": {
+   "after_requests": 4,
+   "headers": {
+    "retry-after": "3",
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-requests": "918",
+    "x-ratelimit-remaining-tokens": "1878",
+    "x-ratelimit-reset-requests": "1h58m4.8s",
+    "x-ratelimit-reset-tokens": "45.915s"
+   },
+   "body": "{\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m72z0pn7e99sgv91196kjcr5` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6122, Requested 2150. Please try again in 2.04s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\",\"type\":\"tokens\",\"code\":\"rate_limit_exceeded\"}}\n"
+  }
+ },
+ "latency_samples": [
+  [
+   560.8,
+   633.0,
+   85,
+   74
+  ],
+  [
+   844.2,
+   909.1,
+   85,
+   74
+  ],
+  [
+   509.9,
+   575.9,
+   85,
+   74
+  ],
+  [
+   2595.9,
+   2636.6,
+   85,
+   74
+  ],
+  [
+   210.9,
+   276.5,
+   85,
+   74
+  ],
+  [
+   694.7,
+   781.9,
+   85,
+   74
+  ],
+  [
+   432.9,
+   514.8,
+   85,
+   74
+  ],
+  [
+   465.2,
+   543.4,
+   85,
+   74
+  ],
+  [
+   281.5,
+   346.5,
+   85,
+   74
+  ],
+  [
+   566.4,
+   589.9,
+   85,
+   74
+  ],
+  [
+   198.1,
+   263.5,
+   85,
+   74
+  ],
+  [
+   499.9,
+   583.8,
+   85,
+   74
+  ],
+  [
+   481.6,
+   543.6,
+   85,
+   74
+  ],
+  [
+   311.7,
+   376.2,
+   85,
+   74
+  ],
+  [
+   412.0,
+   480.6,
+   85,
+   74
+  ],
+  [
+   581.4,
+   645.9,
+   85,
+   74
+  ],
+  [
+   194.8,
+   269.2,
+   85,
+   74
+  ],
+  [
+   460.4,
+   520.1,
+   85,
+   74
+  ],
+  [
+   194.6,
+   265.2,
+   85,
+   74
+  ],
+  [
+   511.4,
+   622.4,
+   85,
+   74
+  ],
+  [
+   336.2,
+   406.2,
+   85,
+   74
+  ],
+  [
+   290.2,
+   361.6,
+   85,
+   74
+  ],
+  [
+   524.7,
+   597.5,
+   85,
+   74
+  ],
+  [
+   445.1,
+   448.4,
+   85,
+   74
+  ],
+  [
+   709.2,
+   772.7,
+   85,
+   74
+  ],
+  [
+   508.4,
+   573.0,
+   85,
+   74
+  ],
+  [
+   508.4,
+   586.3,
+   85,
+   74
+  ],
+  [
+   494.4,
+   556.1,
+   85,
+   74
+  ],
+  [
+   390.6,
+   469.8,
+   85,
+   74
+  ],
+  [
+   499.1,
+   563.0,
+   85,
+   74
+  ]
+ ],
+ "concurrency": {
+  "1": [
+   [
+    "ok",
+    649.8
+   ]
+  ],
+  "2": [
+   [
+    "ok",
+    560.6
+   ],
+   [
+    "ok",
+    561.1
+   ]
+  ],
+  "4": [
+   [
+    "ok",
+    599.0
+   ],
+   [
+    "ok",
+    562.3
+   ],
+   [
+    "ok",
+    571.5
+   ],
+   [
+    "ok",
+    643.1
+   ]
+  ],
+  "8": [
+   [
+    "ok",
+    623.1
+   ],
+   [
+    "ok",
+    549.5
+   ],
+   [
+    "ok",
+    622.6
+   ],
+   [
+    "ok",
+    591.1
+   ],
+   [
+    "ok",
+    504.8
+   ],
+   [
+    "ok",
+    613.7
+   ],
+   [
+    "ok",
+    589.7
+   ],
+   [
+    "ok",
+    642.7
+   ]
+  ]
+ }
+}

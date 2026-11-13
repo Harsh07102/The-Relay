@@ -1,0 +1,26 @@
+{
+ "R1": {
+  "setting": "150w/30ov, k=6, rerank=no",
+  "recall_at_k": "12/15",
+  "mean_cov_answerable": 0.8,
+  "mean_cov_unanswerable": 0.8
+ },
+ "R2": {
+  "setting": "350w/60ov, k=4, rerank=no",
+  "recall_at_k": "11/15",
+  "mean_cov_answerable": 0.83,
+  "mean_cov_unanswerable": 0.77
+ },
+ "R3": {
+  "setting": "350w/60ov, k=4, rerank=yes",
+  "recall_at_k": "12/15",
+  "mean_cov_answerable": 0.82,
+  "mean_cov_unanswerable": 0.77
+ },
+ "R4": {
+  "setting": "600w/100ov, k=3, rerank=yes",
+  "recall_at_k": "11/15",
+  "mean_cov_answerable": 0.86,
+  "mean_cov_unanswerable": 0.76
+ }
+}
